@@ -1,0 +1,39 @@
+diff -ur LRPS2-1f88fb5e663ff8b516dbca00f81fac271333b4aa.orig/3rdparty/wxwidgets3.0/UsewxWidgets.cmake LRPS2-1f88fb5e663ff8b516dbca00f81fac271333b4aa/3rdparty/wxwidgets3.0/UsewxWidgets.cmake
+--- LRPS2-1f88fb5e663ff8b516dbca00f81fac271333b4aa.orig/3rdparty/wxwidgets3.0/UsewxWidgets.cmake	2023-01-19 14:24:22.000000000 +0100
++++ LRPS2-1f88fb5e663ff8b516dbca00f81fac271333b4aa/3rdparty/wxwidgets3.0/UsewxWidgets.cmake	2023-02-04 18:57:10.937313697 +0100
+@@ -1,7 +1,7 @@
+ set(wxWidgets_FOUND 1)
+ set(wxWidgets_DIR ${CMAKE_SOURCE_DIR}/3rdparty/wxwidgets3.0)
+ set(wxWidgets_INCLUDE_DIRS ${wxWidgets_DIR}/include ${wxWidgets_DIR}/include/nogui)
+-set(wxWidgets_LIBRARIES wxwidgets)
++set(wxWidgets_LIBRARIES wx_baseu-3.0-gtk3)
+ set(wxWidgets_CXX_FLAGS)
+ 
+ include_directories(SYSTEM ${wxWidgets_INCLUDE_DIRS})
+diff -ur LRPS2-1f88fb5e663ff8b516dbca00f81fac271333b4aa.orig/cmake/SearchForStuff.cmake LRPS2-1f88fb5e663ff8b516dbca00f81fac271333b4aa/cmake/SearchForStuff.cmake
+--- LRPS2-1f88fb5e663ff8b516dbca00f81fac271333b4aa.orig/cmake/SearchForStuff.cmake	2023-01-19 14:24:22.000000000 +0100
++++ LRPS2-1f88fb5e663ff8b516dbca00f81fac271333b4aa/cmake/SearchForStuff.cmake	2023-02-04 19:12:45.003637806 +0100
+@@ -114,7 +114,7 @@
+     This text being in a compile log in an open issue may cause it to be closed.")
+ endif()
+ 
+-add_subdirectory(3rdparty/libchdr EXCLUDE_FROM_ALL)
+-include_directories(3rdparty/libchdr/include)
+-add_subdirectory(3rdparty/yaml-cpp EXCLUDE_FROM_ALL)
+-include_directories(3rdparty/yaml-cpp/include)
++#add_subdirectory(3rdparty/libchdr EXCLUDE_FROM_ALL)
++#include_directories(3rdparty/libchdr/include)
++#add_subdirectory(3rdparty/yaml-cpp EXCLUDE_FROM_ALL)
++#include_directories(3rdparty/yaml-cpp/include)
+diff -ur LRPS2-1f88fb5e663ff8b516dbca00f81fac271333b4aa.orig/common/src/Utilities/CMakeLists.txt LRPS2-1f88fb5e663ff8b516dbca00f81fac271333b4aa/common/src/Utilities/CMakeLists.txt
+--- LRPS2-1f88fb5e663ff8b516dbca00f81fac271333b4aa.orig/common/src/Utilities/CMakeLists.txt	2023-01-19 14:24:22.000000000 +0100
++++ LRPS2-1f88fb5e663ff8b516dbca00f81fac271333b4aa/common/src/Utilities/CMakeLists.txt	2023-02-04 19:17:21.884005411 +0100
+@@ -72,7 +72,7 @@
+     ${LIBC_LIBRARIES} # Gold (new linux linker) does not get automatically dependency of dependency
+ 	${wxWidgets_LIBRARIES}
+ 	yaml-cpp
+-	chdr-static
++	chdr
+ )
+ 
+ if(MSVC)

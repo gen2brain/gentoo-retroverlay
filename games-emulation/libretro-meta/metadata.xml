@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>gen2brain@gmail.com</email>
+		<name>Milan Nikolic</name>
+	</maintainer>
+	<use>
+		<flag name="3do">3DO</flag>
+		<flag name="3ds">Nintendo 3DS</flag>
+		<flag name="arcade">Arcade</flag>
+		<flag name="c64">Commodore 64</flag>
+		<flag name="dos">DOS</flag>
+		<flag name="ds">Nintendo DS</flag>
+		<flag name="gameboy">Nintendo Game Boy</flag>
+		<flag name="gamecube">Nintendo Gamecube</flag>
+		<flag name="genesis">Sega Genesis</flag>
+		<flag name="jaguar">Atari Jaguar</flag>
+		<flag name="mame">MAME Arcade</flag>
+		<flag name="n64">Nintendo 64</flag>
+		<flag name="nes">Nintendo NES</flag>
+		<flag name="pce">PC Engine</flag>
+		<flag name="psx">Sony Playstation</flag>
+		<flag name="ps2">Sony Playstation 2</flag>
+		<flag name="psp">Sony PSP</flag>
+		<flag name="saturn">Sega Saturn</flag>
+		<flag name="snes">Nintendo Super NES</flag>
+		<flag name="wii">Nintendo Wii</flag>
+	</use>
+	<longdescription lang="en">Meta Package for Libretro cores</longdescription>
+</pkgmetadata>
