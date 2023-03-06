@@ -13,11 +13,14 @@ SRC_URI="
 	https://github.com/flyinghead/mingw-breakpad/archive/d2657e1267d2ce9399bcc6b9c5b01b465db057b1.tar.gz -> ${P}-core_deps_breakpad.tar.gz
 	https://github.com/rtissera/libchdr/archive/d3ffd20ca71686877372dea7f9eed359dbf65ba2.tar.gz -> ${P}-core_deps_libchdr.tar.gz
 	https://github.com/vinniefalco/LuaBridge/archive/fab7b33b896a42dcc865ba5ecdbacd9f409137f8.tar.gz -> ${P}-core_deps_luabridge.tar.gz
+	https://github.com/KhronosGroup/Vulkan-Headers/archive/b75e5a02b6933caf86c5822d019067b335492c85.tar.gz -> ${P}-core_deps_Vulkan-Headers.tar.gz
+	https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator/archive/a6bfc237255a6bac1513f7c1ebde6d8aed6b5191.tar.gz -> ${P}-core_deps_VulkanMemoryAllocator.tar.gz
+	https://github.com/KhronosGroup/glslang/archive/10423ec659d301a0ff2daac8bbf38980abf27590.tar.gz -> ${P}-core_deps_glslang.tar.gz
 "
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gles +opengl vulkan"
+IUSE="gles +opengl openmp vulkan"
 
 REQUIRED_USE="
 	|| ( gles opengl )
@@ -26,6 +29,7 @@ REQUIRED_USE="
 
 RDEPEND="
 	opengl? ( virtual/opengl )
+	openmp? ( sys-libs/libomp )
 	vulkan? ( media-libs/vulkan-loader )
 	gles? ( media-libs/mesa[egl(+),gles2] )
 "
@@ -47,6 +51,9 @@ src_unpack() {
 		core_deps_breakpad
 		core_deps_libchdr
 		core_deps_luabridge
+		core_deps_Vulkan-Headers
+		core_deps_VulkanMemoryAllocator
+		core_deps_glslang
 	)
 
 	local i
@@ -62,7 +69,9 @@ src_configure() {
 
 	local mycmakeargs=(
 		-DLIBRETRO=ON
-		-DUSE_OPENMP=OFF
+		-DUSE_HOST_LIBZIP=ON
+		-DUSE_OPENGL=$(usex opengl)
+		-DUSE_OPENMP=$(usex openmp)
 		-DUSE_GLES2=$(usex gles)
 		-DUSE_VULKAN=$(usex vulkan)
 		-DCMAKE_BUILD_TYPE=Release
