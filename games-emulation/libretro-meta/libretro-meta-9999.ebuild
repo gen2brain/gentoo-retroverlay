@@ -10,7 +10,7 @@ SLOT="0"
 LICENSE="metapackage"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="+3do 3ds amiga +arcade c64 dos +dreamcast +ds +gameboy +gamecube +genesis +jaguar mame +n64 nes pce +psx +ps2 +psp +saturn +snes +wii"
+IUSE="+3do 3ds amiga +arcade c64 dos +dreamcast +ds +gameboy +gamecube +genesis +jaguar mame +n64 neocd nes pce +psx +ps2 +psp +saturn scummvm +snes +wii"
 
 RDEPEND="
 	3do? ( games-emulation/opera-libretro )
@@ -27,12 +27,14 @@ RDEPEND="
 	jaguar? ( games-emulation/virtualjaguar-libretro )
 	mame? ( games-emulation/mame-libretro )
 	n64? ( games-emulation/parallel_n64-libretro )
+	neocd? ( games-emulation/neocd-libretro )
 	nes? ( games-emulation/mesen-libretro )
 	pce? ( games-emulation/mednafen-pce-libretro )
 	psx? ( games-emulation/swanstation-libretro )
 	ps2? ( games-emulation/pcsx2-libretro )
 	psp? ( games-emulation/ppsspp-libretro )
 	saturn? ( games-emulation/kronos-libretro )
+	scummvm? ( games-emulation/scummvm-libretro )
 	snes? ( games-emulation/mesens-libretro )
 	wii? ( games-emulation/dolphin-libretro )"
 

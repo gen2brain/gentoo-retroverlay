@@ -18,12 +18,14 @@
 		<flag name="jaguar">Atari Jaguar</flag>
 		<flag name="mame">MAME Arcade</flag>
 		<flag name="n64">Nintendo 64</flag>
+		<flag name="neocd">Neo Geo CD</flag>
 		<flag name="nes">Nintendo NES</flag>
 		<flag name="pce">PC Engine</flag>
 		<flag name="psx">Sony Playstation</flag>
 		<flag name="ps2">Sony Playstation 2</flag>
 		<flag name="psp">Sony PSP</flag>
 		<flag name="saturn">Sega Saturn</flag>
+		<flag name="scummvm">ScummVM</flag>
 		<flag name="snes">Nintendo Super NES</flag>
 		<flag name="wii">Nintendo Wii</flag>
 	</use>
