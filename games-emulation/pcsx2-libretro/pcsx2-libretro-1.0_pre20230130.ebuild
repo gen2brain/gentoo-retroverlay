@@ -4,7 +4,7 @@
 EAPI=7
 
 LIBRETRO_REPO_NAME="libretro/lrps2"
-LIBRETRO_COMMIT_SHA="1f88fb5e663ff8b516dbca00f81fac271333b4aa"
+LIBRETRO_COMMIT_SHA="f3c8743d6a42fe429f703b476fecfdb5655a98a9"
 
 CMAKE_MAKEFILE_GENERATOR="emake"
 
@@ -20,7 +20,6 @@ SLOT="0"
 DEPEND="dev-util/ccache"
 RDEPEND="
 	dev-cpp/yaml-cpp
-	dev-libs/libchdr
 	x11-libs/wxGTK:3.0-gtk3
 "
 

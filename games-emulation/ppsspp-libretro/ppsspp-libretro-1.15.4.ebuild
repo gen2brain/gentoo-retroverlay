@@ -3,7 +3,7 @@
 
 EAPI=7
 
-LIBRETRO_COMMIT_SHA="2d1f8f03fac5f6f8322d83ec838f3a4a003bf334"
+LIBRETRO_COMMIT_SHA="9a80120dc09997e40c0a73fda05c3e07a347259f"
 LIBRETRO_REPO_NAME="hrydgard/ppsspp"
 
 inherit cmake libretro-core
@@ -29,7 +29,7 @@ RDEPEND="
 	dev-util/glslang:=
 	media-libs/libpng:=
 	media-libs/libsdl2[joystick]
-	media-video/ffmpeg:0/56.58.58
+	media-video/ffmpeg
 	sys-libs/zlib:=
 	opengl? (
 		virtual/opengl

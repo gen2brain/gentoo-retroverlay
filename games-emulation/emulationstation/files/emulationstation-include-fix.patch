@@ -1,6 +1,6 @@
-diff -ur EmulationStation-2.11.0.orig/es-app/src/CollectionSystemManager.cpp EmulationStation-2.11.0/es-app/src/CollectionSystemManager.cpp
---- EmulationStation-2.11.0.orig/es-app/src/CollectionSystemManager.cpp	2022-09-18 19:00:03.000000000 +0200
-+++ EmulationStation-2.11.0/es-app/src/CollectionSystemManager.cpp	2023-01-28 21:22:52.974247925 +0100
+diff -ur EmulationStation-2.11.2.orig/es-app/src/CollectionSystemManager.cpp EmulationStation-2.11.2/es-app/src/CollectionSystemManager.cpp
+--- EmulationStation-2.11.2.orig/es-app/src/CollectionSystemManager.cpp	2023-04-13 16:23:07.000000000 +0200
++++ EmulationStation-2.11.2/es-app/src/CollectionSystemManager.cpp	2023-08-17 16:30:13.829457092 +0200
 @@ -12,7 +12,7 @@
  #include "Settings.h"
  #include "SystemData.h"
@@ -10,9 +10,9 @@ diff -ur EmulationStation-2.11.0.orig/es-app/src/CollectionSystemManager.cpp Emu
  #include <fstream>
  
  std::string myCollectionsName = "collections";
-diff -ur EmulationStation-2.11.0.orig/es-app/src/Gamelist.cpp EmulationStation-2.11.0/es-app/src/Gamelist.cpp
---- EmulationStation-2.11.0.orig/es-app/src/Gamelist.cpp	2022-09-18 19:00:03.000000000 +0200
-+++ EmulationStation-2.11.0/es-app/src/Gamelist.cpp	2023-01-28 21:22:41.269207291 +0100
+diff -ur EmulationStation-2.11.2.orig/es-app/src/Gamelist.cpp EmulationStation-2.11.2/es-app/src/Gamelist.cpp
+--- EmulationStation-2.11.2.orig/es-app/src/Gamelist.cpp	2023-04-13 16:23:07.000000000 +0200
++++ EmulationStation-2.11.2/es-app/src/Gamelist.cpp	2023-08-17 16:30:13.829457092 +0200
 @@ -8,7 +8,7 @@
  #include "Log.h"
  #include "Settings.h"
@@ -22,9 +22,9 @@ diff -ur EmulationStation-2.11.0.orig/es-app/src/Gamelist.cpp EmulationStation-2
  
  FileData* findOrCreateFile(SystemData* system, const std::string& path, FileType type)
  {
-diff -ur EmulationStation-2.11.0.orig/es-app/src/MetaData.cpp EmulationStation-2.11.0/es-app/src/MetaData.cpp
---- EmulationStation-2.11.0.orig/es-app/src/MetaData.cpp	2022-09-18 19:00:03.000000000 +0200
-+++ EmulationStation-2.11.0/es-app/src/MetaData.cpp	2023-01-28 21:22:13.133109617 +0100
+diff -ur EmulationStation-2.11.2.orig/es-app/src/MetaData.cpp EmulationStation-2.11.2/es-app/src/MetaData.cpp
+--- EmulationStation-2.11.2.orig/es-app/src/MetaData.cpp	2023-04-13 16:23:07.000000000 +0200
++++ EmulationStation-2.11.2/es-app/src/MetaData.cpp	2023-08-17 16:30:13.829457092 +0200
 @@ -2,7 +2,7 @@
  
  #include "utils/FileSystemUtil.h"
@@ -34,9 +34,9 @@ diff -ur EmulationStation-2.11.0.orig/es-app/src/MetaData.cpp EmulationStation-2
  
  MetaDataDecl gameDecls[] = {
  	// key,         type,                   default,            statistic,  name in GuiMetaDataEd,  prompt in GuiMetaDataEd
-diff -ur EmulationStation-2.11.0.orig/es-app/src/scrapers/GamesDBJSONScraper.cpp EmulationStation-2.11.0/es-app/src/scrapers/GamesDBJSONScraper.cpp
---- EmulationStation-2.11.0.orig/es-app/src/scrapers/GamesDBJSONScraper.cpp	2022-09-18 19:00:03.000000000 +0200
-+++ EmulationStation-2.11.0/es-app/src/scrapers/GamesDBJSONScraper.cpp	2023-01-28 21:23:32.821402457 +0100
+diff -ur EmulationStation-2.11.2.orig/es-app/src/scrapers/GamesDBJSONScraper.cpp EmulationStation-2.11.2/es-app/src/scrapers/GamesDBJSONScraper.cpp
+--- EmulationStation-2.11.2.orig/es-app/src/scrapers/GamesDBJSONScraper.cpp	2023-04-13 16:23:07.000000000 +0200
++++ EmulationStation-2.11.2/es-app/src/scrapers/GamesDBJSONScraper.cpp	2023-08-17 16:30:13.829457092 +0200
 @@ -10,7 +10,7 @@
  #include "Settings.h"
  #include "SystemData.h"
@@ -46,9 +46,9 @@ diff -ur EmulationStation-2.11.0.orig/es-app/src/scrapers/GamesDBJSONScraper.cpp
  
  /* When raspbian will get an up to date version of rapidjson we'll be
     able to have it throw in case of error with the following:
-diff -ur EmulationStation-2.11.0.orig/es-app/src/scrapers/ScreenScraper.cpp EmulationStation-2.11.0/es-app/src/scrapers/ScreenScraper.cpp
---- EmulationStation-2.11.0.orig/es-app/src/scrapers/ScreenScraper.cpp	2022-09-18 19:00:03.000000000 +0200
-+++ EmulationStation-2.11.0/es-app/src/scrapers/ScreenScraper.cpp	2023-01-28 21:23:19.117342922 +0100
+diff -ur EmulationStation-2.11.2.orig/es-app/src/scrapers/ScreenScraper.cpp EmulationStation-2.11.2/es-app/src/scrapers/ScreenScraper.cpp
+--- EmulationStation-2.11.2.orig/es-app/src/scrapers/ScreenScraper.cpp	2023-04-13 16:23:07.000000000 +0200
++++ EmulationStation-2.11.2/es-app/src/scrapers/ScreenScraper.cpp	2023-08-17 16:30:30.539504886 +0200
 @@ -7,7 +7,7 @@
  #include "PlatformId.h"
  #include "Settings.h"
@@ -58,9 +58,9 @@ diff -ur EmulationStation-2.11.0.orig/es-app/src/scrapers/ScreenScraper.cpp Emul
  #include <cstring>
  
  using namespace PlatformIds;
-diff -ur EmulationStation-2.11.0.orig/es-app/src/SystemData.h EmulationStation-2.11.0/es-app/src/SystemData.h
---- EmulationStation-2.11.0.orig/es-app/src/SystemData.h	2022-09-18 19:00:03.000000000 +0200
-+++ EmulationStation-2.11.0/es-app/src/SystemData.h	2023-01-28 21:21:30.637962093 +0100
+diff -ur EmulationStation-2.11.2.orig/es-app/src/SystemData.h EmulationStation-2.11.2/es-app/src/SystemData.h
+--- EmulationStation-2.11.2.orig/es-app/src/SystemData.h	2023-04-13 16:23:07.000000000 +0200
++++ EmulationStation-2.11.2/es-app/src/SystemData.h	2023-08-17 16:30:13.829457092 +0200
 @@ -9,7 +9,7 @@
  #include <string>
  #include <vector>
@@ -70,21 +70,21 @@ diff -ur EmulationStation-2.11.0.orig/es-app/src/SystemData.h EmulationStation-2
  
  class FileData;
  class FileFilterIndex;
-diff -ur EmulationStation-2.11.0.orig/es-core/src/InputConfig.cpp EmulationStation-2.11.0/es-core/src/InputConfig.cpp
---- EmulationStation-2.11.0.orig/es-core/src/InputConfig.cpp	2022-09-18 19:00:03.000000000 +0200
-+++ EmulationStation-2.11.0/es-core/src/InputConfig.cpp	2023-01-28 21:18:07.604257256 +0100
-@@ -1,7 +1,7 @@
- #include "InputConfig.h"
+diff -ur EmulationStation-2.11.2.orig/es-core/src/InputConfig.cpp EmulationStation-2.11.2/es-core/src/InputConfig.cpp
+--- EmulationStation-2.11.2.orig/es-core/src/InputConfig.cpp	2023-04-13 16:23:07.000000000 +0200
++++ EmulationStation-2.11.2/es-core/src/InputConfig.cpp	2023-08-17 16:30:13.829457092 +0200
+@@ -2,7 +2,7 @@
  
  #include "Log.h"
+ #include "utils/StringUtil.h"
 -#include <pugixml/src/pugixml.hpp>
 +#include <pugixml.hpp>
  
  //some util functions
  std::string inputTypeToString(InputType type)
-diff -ur EmulationStation-2.11.0.orig/es-core/src/InputManager.cpp EmulationStation-2.11.0/es-core/src/InputManager.cpp
---- EmulationStation-2.11.0.orig/es-core/src/InputManager.cpp	2022-09-18 19:00:03.000000000 +0200
-+++ EmulationStation-2.11.0/es-core/src/InputManager.cpp	2023-01-28 21:18:33.588347460 +0100
+diff -ur EmulationStation-2.11.2.orig/es-core/src/InputManager.cpp EmulationStation-2.11.2/es-core/src/InputManager.cpp
+--- EmulationStation-2.11.2.orig/es-core/src/InputManager.cpp	2023-04-13 16:23:07.000000000 +0200
++++ EmulationStation-2.11.2/es-core/src/InputManager.cpp	2023-08-17 16:30:13.829457092 +0200
 @@ -6,7 +6,7 @@
  #include "platform.h"
  #include "Scripting.h"
@@ -94,9 +94,9 @@ diff -ur EmulationStation-2.11.0.orig/es-core/src/InputManager.cpp EmulationStat
  #include <SDL.h>
  #include <iostream>
  #include <assert.h>
-diff -ur EmulationStation-2.11.0.orig/es-core/src/MameNames.cpp EmulationStation-2.11.0/es-core/src/MameNames.cpp
---- EmulationStation-2.11.0.orig/es-core/src/MameNames.cpp	2022-09-18 19:00:03.000000000 +0200
-+++ EmulationStation-2.11.0/es-core/src/MameNames.cpp	2023-01-28 21:18:44.060383814 +0100
+diff -ur EmulationStation-2.11.2.orig/es-core/src/MameNames.cpp EmulationStation-2.11.2/es-core/src/MameNames.cpp
+--- EmulationStation-2.11.2.orig/es-core/src/MameNames.cpp	2023-04-13 16:23:07.000000000 +0200
++++ EmulationStation-2.11.2/es-core/src/MameNames.cpp	2023-08-17 16:30:13.829457092 +0200
 @@ -3,7 +3,7 @@
  #include "resources/ResourceManager.h"
  #include "utils/FileSystemUtil.h"
@@ -106,9 +106,9 @@ diff -ur EmulationStation-2.11.0.orig/es-core/src/MameNames.cpp EmulationStation
  #include <string.h>
  
  MameNames* MameNames::sInstance = nullptr;
-diff -ur EmulationStation-2.11.0.orig/es-core/src/Settings.cpp EmulationStation-2.11.0/es-core/src/Settings.cpp
---- EmulationStation-2.11.0.orig/es-core/src/Settings.cpp	2022-09-18 19:00:03.000000000 +0200
-+++ EmulationStation-2.11.0/es-core/src/Settings.cpp	2023-01-28 21:18:20.916303469 +0100
+diff -ur EmulationStation-2.11.2.orig/es-core/src/Settings.cpp EmulationStation-2.11.2/es-core/src/Settings.cpp
+--- EmulationStation-2.11.2.orig/es-core/src/Settings.cpp	2023-04-13 16:23:07.000000000 +0200
++++ EmulationStation-2.11.2/es-core/src/Settings.cpp	2023-08-17 16:30:13.829457092 +0200
 @@ -4,7 +4,7 @@
  #include "Log.h"
  #include "Scripting.h"
@@ -118,9 +118,9 @@ diff -ur EmulationStation-2.11.0.orig/es-core/src/Settings.cpp EmulationStation-
  #include <algorithm>
  #include <vector>
  
-diff -ur EmulationStation-2.11.0.orig/es-core/src/ThemeData.cpp EmulationStation-2.11.0/es-core/src/ThemeData.cpp
---- EmulationStation-2.11.0.orig/es-core/src/ThemeData.cpp	2022-09-18 19:00:03.000000000 +0200
-+++ EmulationStation-2.11.0/es-core/src/ThemeData.cpp	2023-01-28 21:18:53.589416895 +0100
+diff -ur EmulationStation-2.11.2.orig/es-core/src/ThemeData.cpp EmulationStation-2.11.2/es-core/src/ThemeData.cpp
+--- EmulationStation-2.11.2.orig/es-core/src/ThemeData.cpp	2023-04-13 16:23:07.000000000 +0200
++++ EmulationStation-2.11.2/es-core/src/ThemeData.cpp	2023-08-17 16:30:13.829457092 +0200
 @@ -7,7 +7,7 @@
  #include "Log.h"
  #include "platform.h"
@@ -130,9 +130,9 @@ diff -ur EmulationStation-2.11.0.orig/es-core/src/ThemeData.cpp EmulationStation
  #include <algorithm>
  
  std::vector<std::string> ThemeData::sSupportedViews { { "system" }, { "basic" }, { "detailed" }, { "grid" }, { "video" } };
-diff -ur EmulationStation-2.11.0.orig/external/CMakeLists.txt EmulationStation-2.11.0/external/CMakeLists.txt
---- EmulationStation-2.11.0.orig/external/CMakeLists.txt	2022-09-18 19:00:03.000000000 +0200
-+++ EmulationStation-2.11.0/external/CMakeLists.txt	2023-01-28 21:20:37.461777491 +0100
+diff -ur EmulationStation-2.11.2.orig/external/CMakeLists.txt EmulationStation-2.11.2/external/CMakeLists.txt
+--- EmulationStation-2.11.2.orig/external/CMakeLists.txt	2023-04-13 16:23:07.000000000 +0200
++++ EmulationStation-2.11.2/external/CMakeLists.txt	2023-08-17 16:30:13.829457092 +0200
 @@ -2,4 +2,3 @@
  # package managers are included with the project (in the 'external' folder)
  

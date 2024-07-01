@@ -4,7 +4,7 @@
 EAPI=7
 
 LIBRETRO_REPO_NAME="libretro/FBNeo"
-LIBRETRO_COMMIT_SHA="aad581f27fbc0777dfd24be7536f8fd6facf857b"
+LIBRETRO_COMMIT_SHA="937ae21b1a828c9a2c3b5c0fe2da97ddc3e94580"
 
 inherit libretro-core
 

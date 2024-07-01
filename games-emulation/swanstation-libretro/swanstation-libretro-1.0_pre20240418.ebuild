@@ -4,7 +4,7 @@
 EAPI=7
 
 LIBRETRO_REPO_NAME="libretro/swanstation"
-LIBRETRO_COMMIT_SHA="d27eb69e9e9dfd5efcb4c686fb48de9d8be3d17b"
+LIBRETRO_COMMIT_SHA="c7fefb5bfdec2569c2528f8daa6e75b7a3de0880"
 
 CMAKE_MAKEFILE_GENERATOR="emake"
 
@@ -26,17 +26,14 @@ RDEPEND="${DEPEND}
 src_prepare() {
 	libretro-core_src_prepare
 	mkdir build
-	#cmake_src_prepare
 }
 
 src_configure() {
-	cd build && cmake ..
-	#cmake_src_configure
+	cd build && cmake .. -DBUILD_LIBRETRO_CORE=ON -DBUILD_QT_FRONTEND=OFF -DENABLE_DISCORD_PRESENCE=OFF -DCMAKE_BUILD_TYPE=Release -DENABLE_CHEEVOS=ON -DBUILD_SHARED_LIBS=OFF
 }
 
 src_compile() {
 	cd build && emake
-	#cmake_src_compile
 }
 
 src_install() {

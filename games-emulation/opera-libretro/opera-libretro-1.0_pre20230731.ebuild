@@ -4,7 +4,7 @@
 EAPI=7
 
 LIBRETRO_REPO_NAME="libretro/opera-libretro"
-LIBRETRO_COMMIT_SHA="8a49bb8877611037438aeb857cb182f41ee0e3a1"
+LIBRETRO_COMMIT_SHA="100ae1e7decefe1f17d98cfcb9f2af4ff8452691"
 inherit libretro-core
 
 DESCRIPTION="libretro implementation of 4DO/libfreedo. (Panasonic 3DO)"

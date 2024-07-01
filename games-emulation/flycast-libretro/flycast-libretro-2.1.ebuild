@@ -35,8 +35,8 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 BDEPEND="
-	dev-util/ninja
-	dev-util/cmake
+	dev-build/ninja
+	dev-build/cmake
 "
 
 S="${WORKDIR}/flycast-${PV}"

@@ -4,7 +4,7 @@
 EAPI=7
 
 LIBRETRO_REPO_NAME="libretro/${PN}"
-LIBRETRO_COMMIT_SHA="4ec80faf1b5439d1654f407805bb66141b880826"
+LIBRETRO_COMMIT_SHA="ded629fd9ba2d9da5e379c9c526be79801824c26"
 
 DESCRIPTION="Assets needed for RetroArch. Also contains the official branding."
 HOMEPAGE="https://github.com/libretro/retroarch-assets"

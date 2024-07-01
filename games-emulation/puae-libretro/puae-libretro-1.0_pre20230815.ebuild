@@ -4,7 +4,7 @@
 EAPI=7
 
 LIBRETRO_REPO_NAME="libretro/libretro-uae"
-LIBRETRO_COMMIT_SHA="13aa6e65019c37c20b282c0f8fba5be0c8627462"
+LIBRETRO_COMMIT_SHA="a51d1529134e7deac7f524be64c108476a41748a"
 
 inherit libretro-core
 

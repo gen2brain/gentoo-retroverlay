@@ -4,7 +4,7 @@
 EAPI=7
 
 LIBRETRO_REPO_NAME="libretro/virtualjaguar-libretro"
-LIBRETRO_COMMIT_SHA="2cc06899b839639397b8b30384a191424b6f529d"
+LIBRETRO_COMMIT_SHA="8126e5c504ac7217a638f38e4cd9190822c8abdd"
 
 inherit libretro-core
 

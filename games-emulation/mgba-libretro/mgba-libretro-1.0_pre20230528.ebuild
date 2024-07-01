@@ -4,7 +4,7 @@
 EAPI=7
 
 LIBRETRO_REPO_NAME="libretro/mgba"
-LIBRETRO_COMMIT_SHA="a69c3434afe8b26cb8f9463077794edfa7d5efad"
+LIBRETRO_COMMIT_SHA="314bf7b676f5b820f396209eb0c7d6fbe8103486"
 
 inherit libretro-core
 
@@ -27,7 +27,7 @@ DEPEND="
 	ffmpeg? ( virtual/ffmpeg:0= )
 	lzma? ( app-arch/xz-utils:0= )
 	png? ( media-libs/libpng:0= )
-	opengl? ( media-libs/mesa:0=[gles2?] )
+	opengl? ( media-libs/mesa:0= )
 	png? ( media-libs/libpng:0= )
 	zlib? ( sys-libs/zlib:0= )
 "

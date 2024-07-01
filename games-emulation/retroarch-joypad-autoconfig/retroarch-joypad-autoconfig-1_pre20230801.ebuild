@@ -3,7 +3,7 @@
 
 EAPI=7
 
-LIBRETRO_COMMIT_SHA="8ec6304a14bd37cf927ebe7555a274ac4fefeb69"
+LIBRETRO_COMMIT_SHA="5666e46bb89caf4e9af358fdb97a2b384cb62f36"
 
 inherit libretro
 

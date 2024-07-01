@@ -21,8 +21,8 @@ DEPEND="
 	media-libs/freeimage[png,jpeg]
 	media-libs/freetype
 	media-libs/libsdl2
-	net-misc/curl
 	media-video/vlc
+	net-misc/curl
 	dev-libs/pugixml
 "
 

@@ -1,15 +1,15 @@
-diff -ur EmulationStation-2.11.0.orig/es-core/src/resources/ResourceManager.cpp EmulationStation-2.11.0/es-core/src/resources/ResourceManager.cpp
---- EmulationStation-2.11.0.orig/es-core/src/resources/ResourceManager.cpp	2022-09-18 19:00:03.000000000 +0200
-+++ EmulationStation-2.11.0/es-core/src/resources/ResourceManager.cpp	2023-01-30 20:49:56.350239924 +0100
+diff -ur EmulationStation-2.11.2.orig/es-core/src/resources/ResourceManager.cpp EmulationStation-2.11.2/es-core/src/resources/ResourceManager.cpp
+--- EmulationStation-2.11.2.orig/es-core/src/resources/ResourceManager.cpp	2023-04-13 16:23:07.000000000 +0200
++++ EmulationStation-2.11.2/es-core/src/resources/ResourceManager.cpp	2023-08-17 16:23:32.529926163 +0200
 @@ -27,6 +27,12 @@
  	{
  		std::string test;
  
-+		// check in share
++        // check in share
 +        std::string share = "/usr/share/emulationstation/";
-+		test = share + &path[2];
-+		if(Utils::FileSystem::exists(test))
-+			return test;
++        test = share + &path[2];
++        if(Utils::FileSystem::exists(test))
++            return test;
 +
  		// check in homepath
  		test = Utils::FileSystem::getHomePath() + "/.emulationstation/resources/" + &path[2];

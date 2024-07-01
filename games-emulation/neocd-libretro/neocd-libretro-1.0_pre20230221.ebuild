@@ -4,7 +4,7 @@
 EAPI=7
 
 LIBRETRO_REPO_NAME="libretro/neocd_libretro"
-LIBRETRO_COMMIT_SHA="de42c4f280455f33f01a6581ec7c5e39464c6cfa"
+LIBRETRO_COMMIT_SHA="2070f5258c9d3feee15962f9db8c8ef20072ece8"
 
 inherit libretro-core
 

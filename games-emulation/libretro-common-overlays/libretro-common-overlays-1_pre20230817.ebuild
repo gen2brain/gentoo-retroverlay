@@ -3,7 +3,7 @@
 
 EAPI=7
 
-LIBRETRO_COMMIT_SHA="b3827a2c63834ed9e1902acc7cf9019f64771ed3"
+LIBRETRO_COMMIT_SHA="115d8670c2e032e4a41ba45f766f5cfd9dae28b8"
 
 DESCRIPTION="Collection of overlay files for use with RetroArch"
 HOMEPAGE="https://github.com/libretro/common-overlays"
