@@ -1,0 +1,34 @@
+diff '--color=auto' -ur ppsspp-libretro-1.19.0_pre20250524.orig/Core/HW/Camera.cpp ppsspp-libretro-1.19.0_pre20250524/Core/HW/Camera.cpp
+--- ppsspp-libretro-1.19.0_pre20250524.orig/Core/HW/Camera.cpp	2025-05-26 09:26:42.019417607 +0200
++++ ppsspp-libretro-1.19.0_pre20250524/Core/HW/Camera.cpp	2025-05-26 09:27:55.975487292 +0200
+@@ -283,8 +283,8 @@
+ 			return nullptr;
+ 		}
+ 	}
+-	return nullptr;
+ #endif //USE_FFMPEG
++	return nullptr;
+ }
+ 
+ int __v4l_startCapture(int ideal_width, int ideal_height) {
+diff '--color=auto' -ur ppsspp-libretro-1.19.0_pre20250524.orig/ext/glslang/SPIRV/SpvBuilder.h ppsspp-libretro-1.19.0_pre20250524/ext/glslang/SPIRV/SpvBuilder.h
+--- ppsspp-libretro-1.19.0_pre20250524.orig/ext/glslang/SPIRV/SpvBuilder.h	2025-05-26 09:26:49.251424420 +0200
++++ ppsspp-libretro-1.19.0_pre20250524/ext/glslang/SPIRV/SpvBuilder.h	2025-05-26 09:27:56.010487325 +0200
+@@ -61,6 +61,7 @@
+ #include <set>
+ #include <sstream>
+ #include <stack>
++#include <cstdint>
+ #include <unordered_map>
+ #include <map>
+ 
+diff '--color=auto' -ur ppsspp-libretro-1.19.0_pre20250524.orig/ext/imgui/CMakeLists.txt ppsspp-libretro-1.19.0_pre20250524/ext/imgui/CMakeLists.txt
+--- ppsspp-libretro-1.19.0_pre20250524.orig/ext/imgui/CMakeLists.txt	2025-05-26 09:26:50.941426013 +0200
++++ ppsspp-libretro-1.19.0_pre20250524/ext/imgui/CMakeLists.txt	2025-05-26 09:28:11.244501680 +0200
+@@ -9,5 +9,5 @@
+ 	imgui_impl_platform.cpp
+ )
+ 
+-add_library(imgui ${IMGUI_FILES})
++add_library(imgui STATIC ${IMGUI_FILES})
+ target_include_directories(imgui PRIVATE ../..)

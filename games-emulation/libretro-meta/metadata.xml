@@ -25,7 +25,6 @@
 		<flag name="ps2">Sony Playstation 2</flag>
 		<flag name="psp">Sony PSP</flag>
 		<flag name="saturn">Sega Saturn</flag>
-		<flag name="scummvm">ScummVM</flag>
 		<flag name="snes">Nintendo Super NES</flag>
 		<flag name="wii">Nintendo Wii</flag>
 	</use>

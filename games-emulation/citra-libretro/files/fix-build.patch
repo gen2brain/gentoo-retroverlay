@@ -1,0 +1,63 @@
+diff '--color=auto' -ur citra-libretro-1.0_pre20250518.orig/externals/glslang/SPIRV/SpvBuilder.h citra-libretro-1.0_pre20250518/externals/glslang/SPIRV/SpvBuilder.h
+--- citra-libretro-1.0_pre20250518.orig/externals/glslang/SPIRV/SpvBuilder.h	2025-05-25 11:19:39.605795682 +0200
++++ citra-libretro-1.0_pre20250518/externals/glslang/SPIRV/SpvBuilder.h	2025-05-25 11:28:54.649867305 +0200
+@@ -61,6 +61,7 @@
+ #include <set>
+ #include <sstream>
+ #include <stack>
++#include <cstdint>
+ #include <unordered_map>
+ #include <map>
+ 
+diff '--color=auto' -ur citra-libretro-1.0_pre20250518.orig/src/CMakeLists.txt citra-libretro-1.0_pre20250518/src/CMakeLists.txt
+--- citra-libretro-1.0_pre20250518.orig/src/CMakeLists.txt	2025-05-25 11:19:40.617796223 +0200
++++ citra-libretro-1.0_pre20250518/src/CMakeLists.txt	2025-05-25 11:50:38.296788000 +0200
+@@ -109,6 +109,7 @@
+         -Wall
+         # In case a flag isn't supported on e.g. a certain architecture, don't error.
+         -Wno-unused-command-line-argument
++        -Wno-tautological-compare
+         # Build fortification options
+         -Wp,-D_FORTIFY_SOURCE=2
+         -fstack-protector-strong
+diff '--color=auto' -ur citra-libretro-1.0_pre20250518.orig/src/common/linux/gamemode.cpp citra-libretro-1.0_pre20250518/src/common/linux/gamemode.cpp
+--- citra-libretro-1.0_pre20250518.orig/src/common/linux/gamemode.cpp	2025-05-25 11:19:37.309794454 +0200
++++ citra-libretro-1.0_pre20250518/src/common/linux/gamemode.cpp	2025-05-25 11:37:05.393889104 +0200
+@@ -5,6 +5,7 @@
+ 
+ #include "common/linux/gamemode.h"
+ #include "common/settings.h"
++#include "common/logging/log.h"
+ 
+ namespace Common::Linux {
+
+diff '--color=auto' -ur citra-libretro-1.0_pre20250518.orig/Makefile citra-libretro-1.0_pre20250518/Makefile
+--- citra-libretro-1.0_pre20250518.orig/Makefile	2025-05-25 19:03:23.110981484 +0200
++++ citra-libretro-1.0_pre20250518/Makefile	2025-05-25 19:01:51.026430908 +0200
+@@ -77,6 +77,7 @@
+    fpic := -fPIC
+    SHARED := -shared -Wl,--version-script=$(SRC_DIR)/citra_libretro/link.T -Wl,--no-undefined
+    LIBS +=-lpthread -lGL -ldl
++   CFLAGS = -Wno-implicit-int -Wno-declaration-missing-parameter-type
+
+ #######################################
+ # Nintendo Switch (libnx)
+diff '--color=auto' -ur citra-libretro-1.0_pre20250518.orig/Makefile.common citra-libretro-1.0_pre20250518/Makefile.common
+--- citra-libretro-1.0_pre20250518.orig/Makefile.common	2025-05-25 19:03:23.110981484 +0200
++++ citra-libretro-1.0_pre20250518/Makefile.common	2025-05-25 20:01:58.835665086 +0200
+@@ -1170,7 +1170,6 @@
+                $(SRC_DIR)/common/logging/text_formatter.cpp \
+                $(SRC_DIR)/common/memory_detect.cpp \
+                $(SRC_DIR)/common/microprofile.cpp \
+-               $(SRC_DIR)/common/misc.cpp \
+                $(SRC_DIR)/common/param_package.cpp \
+                $(SRC_DIR)/common/scm_rev.cpp \
+                $(SRC_DIR)/common/settings.cpp \
+@@ -1295,6 +1294,7 @@
+                $(SRC_DIR)/core/hle/service/boss/boss.cpp \
+                $(SRC_DIR)/core/hle/service/boss/boss_p.cpp \
+                $(SRC_DIR)/core/hle/service/boss/boss_u.cpp \
++               $(SRC_DIR)/core/hle/service/boss/online_service.cpp \
+                $(SRC_DIR)/core/hle/service/cam/cam.cpp \
+                $(SRC_DIR)/core/hle/service/cam/cam_c.cpp \
+                $(SRC_DIR)/core/hle/service/cam/cam_q.cpp \

@@ -25,6 +25,8 @@ RDEPEND="
 
 S="${WORKDIR}/LRPS2-${LIBRETRO_COMMIT_SHA}"
 
+PATCHES=( "${FILESDIR}/fix-build.patch" )
+
 src_prepare() {
 	libretro-core_src_prepare
 	mkdir build

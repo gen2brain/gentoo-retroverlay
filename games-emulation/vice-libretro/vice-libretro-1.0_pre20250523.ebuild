@@ -1,0 +1,25 @@
+# Copyright 2021 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
+
+LIBRETRO_REPO_NAME="libretro/vice-libretro"
+LIBRETRO_COMMIT_SHA="f27798806c60f024ce25dc9b8478f12b4d1aa0b6"
+
+inherit libretro-core
+
+DESCRIPTION="Versatile Commodore 8-bit Emulator as a libretro core"
+HOMEPAGE="https://github.com/libretro/vice-libretro"
+KEYWORDS="~amd64 ~x86"
+
+LICENSE="GPL-2"
+SLOT="0"
+
+DEPEND=""
+RDEPEND="${DEPEND}
+		games-emulation/libretro-info"
+
+src_compile() {
+	LIBRETRO_CORE_LIB_FILE="${S}/${LIBRETRO_CORE_NAME}_x64_libretro.so"
+	libretro-core_src_compile
+}

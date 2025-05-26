@@ -1,0 +1,26 @@
+diff '--color=auto' -ur mame-ee7155be0735e38f47c555a69217a2b77d6eca13.orig/Makefile.libretro mame-ee7155be0735e38f47c555a69217a2b77d6eca13/Makefile.libretro
+--- mame-ee7155be0735e38f47c555a69217a2b77d6eca13.orig/Makefile.libretro	2025-05-01 15:23:38.000000000 +0200
++++ mame-ee7155be0735e38f47c555a69217a2b77d6eca13/Makefile.libretro	2025-05-25 13:56:15.177540986 +0200
+@@ -176,14 +176,14 @@
+ 	PTR64 :=
+ endif
+ 
+-ifneq ($(ANDROID_NDK_HOME),)
+-OK := $(shell if [ -d $(ANDROID_NDK_HOME) ]; then echo "ok"; fi)
+-ifeq ($(OK),)
+-$(error  path $(ANDROID_NDK_HOME) does not exist! please set ANDROID_NDK_HOME!)
+-else
+-$(info  ANDROID_NDK_HOME path is a valid directory $(ANDROID_NDK_HOME))
+-endif
+-endif
++#ifneq ($(ANDROID_NDK_HOME),)
++#OK := $(shell if [ -d $(ANDROID_NDK_HOME) ]; then echo "ok"; fi)
++#ifeq ($(OK),)
++#$(error  path $(ANDROID_NDK_HOME) does not exist! please set ANDROID_NDK_HOME!)
++#else
++#$(info  ANDROID_NDK_HOME path is a valid directory $(ANDROID_NDK_HOME))
++#endif
++#endif
+ 
+ ifeq ($(platform),linux32)
+ TARGETOS = linux

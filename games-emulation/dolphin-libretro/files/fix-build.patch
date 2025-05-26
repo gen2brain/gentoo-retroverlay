@@ -1,0 +1,12 @@
+diff '--color=auto' -ur dolphin-a09f78f735f0d2184f64ba5b134abe98ee99c65f.orig/Source/Core/Core/IOS/FS/FileSystemProxy.cpp dolphin-a09f78f735f0d2184f64ba5b134abe98ee99c65f/Source/Core/Core/IOS/FS/FileSystemProxy.cpp
+--- dolphin-a09f78f735f0d2184f64ba5b134abe98ee99c65f.orig/Source/Core/Core/IOS/FS/FileSystemProxy.cpp	2025-05-17 04:50:11.000000000 +0200
++++ dolphin-a09f78f735f0d2184f64ba5b134abe98ee99c65f/Source/Core/Core/IOS/FS/FileSystemProxy.cpp	2025-05-25 10:46:17.334156255 +0200
+@@ -272,7 +272,7 @@
+ 
+   const Result<u32> result =
+       m_ios.GetFS()->SeekFile(handle.fs_fd, request.offset, IOS::HLE::FS::SeekMode(request.mode));
+-  LogResult(result, "Seek({}, 0x{:08x}, {})", handle.name.data(), request.offset, request.mode);
++  //LogResult(result, "Seek({}, 0x{:08x}, {})", handle.name.data(), request.offset, request.mode);
+   if (!result)
+     return GetFSReply(ConvertResult(result.Error()));
+   return GetFSReply(*result);
