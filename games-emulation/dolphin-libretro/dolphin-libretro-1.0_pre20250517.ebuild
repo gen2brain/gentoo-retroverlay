@@ -5,7 +5,6 @@ EAPI=7
 
 LIBRETRO_REPO_NAME="libretro/dolphin"
 LIBRETRO_COMMIT_SHA="a09f78f735f0d2184f64ba5b134abe98ee99c65f"
-LIBRETRO_CORE_NAME="dolphin"
 
 inherit libretro-core cmake
 
@@ -66,7 +65,6 @@ src_configure() {
 }
 
 src_install() {
-	LIBRETRO_LIB_DIR="${EROOT%/}/usr/$(get_libdir)/libretro"
-	insinto "${LIBRETRO_LIB_DIR}"
-	doins "${WORKDIR}/${PF}_build/${LIBRETRO_CORE_NAME}_libretro.so"
+	LIBRETRO_CORE_LIB_FILE="${WORKDIR}/${PF}_build/${LIBRETRO_CORE_NAME}_libretro.so"
+	libretro-core_src_install
 }
