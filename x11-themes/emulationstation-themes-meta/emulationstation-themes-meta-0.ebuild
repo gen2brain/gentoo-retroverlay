@@ -21,7 +21,7 @@ RDEPEND="
 	pixel?			( x11-themes/es-theme-pixel )
 	retrofit?		( x11-themes/es-theme-retrofit-revisited )
 	simple?			( x11-themes/es-theme-simple )
-	simple-dark?	( x11-themes/es-theme-simple-dark )
+	simple-dark?		( x11-themes/es-theme-simple-dark )
 	zoid?			( x11-themes/es-theme-zoid )
 "
 DEPEND=""

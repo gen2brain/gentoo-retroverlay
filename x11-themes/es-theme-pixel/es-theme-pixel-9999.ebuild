@@ -12,7 +12,7 @@ EGIT_REPO_URI="https://github.com/RetroPie/es-theme-pixel"
 
 LICENSE="CC-BY-NC-SA-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=""
