@@ -3,7 +3,7 @@
 
 EAPI=7
 
-LIBRETRO_COMMIT_SHA="eef7aabeb838cfe864f256f2f5c05d329e2e7cc1"
+LIBRETRO_COMMIT_SHA="35fc7a218673ef470244fc4c583ee8bf8851b753"
 LIBRETRO_REPO_NAME="hrydgard/ppsspp"
 
 inherit git-r3 libretro-core cmake
@@ -43,8 +43,6 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 ASSETS_DIR="${LIBRETRO_DATA_DIR}"/PPSSPP
-
-PATCHES=( "${FILESDIR}/fix-build.patch" )
 
 src_unpack() {
 	git-r3_src_unpack
