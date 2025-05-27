@@ -17,8 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 IUSE="alsa cg cpu_flags_x86_sse dbus egl ffmpeg flac freetype gamemode gles gles3 kms libcaca libusb
-	materialui openal +opengl +ozone parport plain_drm pulseaudio qt6 raspberry-pi rgui sdl +sdl2
-	sixel subtitles ssl stripes systemd tinyalsa udev vulkan X xrandr xinerama xmb xv wayland +zlib"
+	materialui openal +opengl +ozone parport plain_drm pulseaudio qt6 rgui sdl +sdl2 sixel
+	subtitles ssl stripes systemd tinyalsa udev vulkan X xrandr xinerama xmb xv wayland +zlib"
 
 MENU_REQUIRED_USE="|| ( gles opengl vulkan )"
 REQUIRED_USE="
@@ -26,9 +26,7 @@ REQUIRED_USE="
 	gles? ( egl )
 	gles3? ( gles )
 	kms? ( egl )
-	materialui? (
-		${MENU_REQUIRED_USE}
-	)
+	materialui? ( ${MENU_REQUIRED_USE} )
 	opengl? ( !gles )
 	ozone? ( ${MENU_REQUIRED_USE} )
 	rgui? (
@@ -46,11 +44,7 @@ RDEPEND="
 	games-emulation/libretro-info
 	games-emulation/retroarch-assets
 
-	!raspberry-pi? ( media-libs/mesa[egl(+)] )
-	raspberry-pi? (
-		|| ( media-libs/raspberrypi-userland media-libs/raspberrypi-userland-bin media-libs/mesa[egl(+),gles2,video_cards_vc4] )
-		)
-
+	media-libs/mesa[egl(+)]
 	alsa? ( media-libs/alsa-lib )
 	cg? ( media-gfx/nvidia-cg-toolkit )
 	ffmpeg? ( media-video/ffmpeg )
